@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
+//Service
+import { WishListService } from './services/wish-list.service';
+
 import { TodoComponent } from '../pages/todo/todo.component';
 import { DoneComponent } from '../pages/done/done.component';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -31,6 +34,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    WishListService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
