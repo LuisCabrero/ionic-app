@@ -8,15 +8,23 @@ export class WishListService {
 
 
   constructor() {
-    let list1 = new List('Games');
-    let list2 = new List('Shopping');
-    let list3 = new List('Stuff');
-
-    this.lists.push(list1);
-    this.lists.push(list2);
-    this.lists.push(list3);
-
-
+    this.loadData();
     console.log("Service running");
   }
+
+  persistData(){
+    localStorage.setItem("data", JSON.stringify(this.lists) );
+  }
+
+  loadData(){
+    if(localStorage.getItem("data")){
+      this.lists = JSON.parse(localStorage.getItem("data"));
+    }
+  }
+
+  addList(list:List){
+    this.lists.push(list);
+    this.persistData();
+  }
+
 }
