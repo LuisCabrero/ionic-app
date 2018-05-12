@@ -27,4 +27,9 @@ export class WishListService {
     this.persistData();
   }
 
+  deleteList(i:number){
+    this.lists.splice(i, 1);
+    this.persistData();
+  }
+
 }

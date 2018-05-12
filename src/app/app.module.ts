@@ -11,9 +11,11 @@ import { TodoComponent } from '../pages/todo/todo.component';
 import { DoneComponent } from '../pages/done/done.component';
 import { AddComponent } from '../pages/add/add.component';
 import { TabsPage } from '../pages/tabs/tabs';
+import { DetailComponent } from '../pages/detail/detail.component';
 
 //Pipe
 import { PlaceHolderPipe } from './pipes/placeholder.pipe';
+import { TodoPipe } from './pipes/todo.pipe';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,10 +24,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     PlaceHolderPipe,
+    TodoPipe,
     TodoComponent,
     DoneComponent,
     TabsPage,
-    AddComponent
+    AddComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TodoComponent,
     DoneComponent,
     TabsPage,
-    AddComponent
+    AddComponent,
+    DetailComponent
   ],
   providers: [
     StatusBar,
